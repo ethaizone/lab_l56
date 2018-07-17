@@ -11,6 +11,18 @@
 |
 */
 
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\URL;
+use Xinax\LaravelGettext\Facades\LaravelGettext;
+
 Route::get('/', function () {
+
     return view('welcome');
+});
+
+
+Route::get('/lang/{locale?}', function ($locale) {
+
+    LaravelGettext::setLocale($locale);
+    return Redirect::to(URL::previous());
 });

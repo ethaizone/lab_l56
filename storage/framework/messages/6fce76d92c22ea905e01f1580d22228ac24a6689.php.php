@@ -63,6 +63,8 @@
                 margin-bottom: 30px;
             }
         </style>
+
+        <script src="https://cdn.ckeditor.com/4.10.0/standard/ckeditor.js"></script>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -82,22 +84,33 @@
                     Laravel
                 </div>
 
+
                 <div class="links">
+                    <a href="https://laravel.com/docs"><?php echo e(_i('Documentation %s', 'test')); ?></a>
                     <a href="https://laravel.com/docs"><?php echo e(_i('Documentation')); ?></a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com"><?php echo e(_i('News')); ?></a>
-                    <a href="https://forge.laravel.com">Forge</a>
+                    <a href="https://forge.laravel.com"><?php echo e(_i('Forge')); ?>Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
 
                 <p>
                     Test translate<br/>
-                    <?php echo e(_n('I have %s dog.', 'I have %s dogs.', 1, 1)); ?>
-
-                    <?php echo e(_n('I have %s dog.', 'I have %s dogs.', 2, 2)); ?>
-
+                    <?php $dog = rand(1, 1); ?>
+                    <?php echo e(_n('I have %s dog.', 'I have %s dogs.', $dog, $dog)); ?><br/>
 
                 </p>
+
+
+                <ul>
+                    <?php $__currentLoopData = Config::get('laravel-gettext.supported-locales'); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $locale): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <li><a href="/lang/<?php echo e($locale); ?>"><?php echo e($locale); ?></a></li>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                </ul>
+
+
+                <h1><?php echo e(env('APP_ENV')); ?></h1>
+
             </div>
         </div>
     </body>
