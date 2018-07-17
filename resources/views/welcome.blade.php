@@ -90,8 +90,8 @@
                     <a href="https://laravel.com/docs">{{ _i('Documentation') }}</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">{{ _i('News') }}</a>
-                    <a href="https://forge.laravel.com">{{ _i('Forge') }}Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://forge.laravel.com">{{ _i('Forge') }}</a>
+                    <a href="https://github.com/laravel/laravel">{{ _i('GitHub') }}</a>
                 </div>
 
                 <p>

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MultilanguageLaravelApplication\n"
-"POT-Creation-Date: 2018-07-17 16:45+0700\n"
-"PO-Revision-Date: 2018-07-17 16:45+0700\n"
+"POT-Creation-Date: 2018-07-17 16:49+0700\n"
+"PO-Revision-Date: 2018-07-17 16:49+0700\n"
 "Last-Translator: James Translator <james@translations.colm>\n"
 "Language-Team: James Translator <james@translations.colm>\n"
 "Language: th_TH\n"
@@ -19,16 +19,25 @@ msgstr ""
 "X-Poedit-SearchPath-2: Console\n"
 "X-Poedit-SearchPath-3: ../storage/framework/messages\n"
 
-#: ../storage/framework/messages/6fce76d92c22ea905e01f1580d22228ac24a6689.php.php:86
+#: ../storage/framework/messages/6fce76d92c22ea905e01f1580d22228ac24a6689.php.php:89
+#, fuzzy, php-format
+#| msgid "Documentation"
+msgid "Documentation %s"
+msgstr "เอกสาร"
+
+#: ../storage/framework/messages/6fce76d92c22ea905e01f1580d22228ac24a6689.php.php:90
 msgid "Documentation"
 msgstr "เอกสาร"
 
-#: ../storage/framework/messages/6fce76d92c22ea905e01f1580d22228ac24a6689.php.php:88
+#: ../storage/framework/messages/6fce76d92c22ea905e01f1580d22228ac24a6689.php.php:92
 msgid "News"
 msgstr "ข่าวสาร"
 
-#: ../storage/framework/messages/6fce76d92c22ea905e01f1580d22228ac24a6689.php.php:95
-#: ../storage/framework/messages/6fce76d92c22ea905e01f1580d22228ac24a6689.php.php:97
+#: ../storage/framework/messages/6fce76d92c22ea905e01f1580d22228ac24a6689.php.php:93
+msgid "Forge"
+msgstr ""
+
+#: ../storage/framework/messages/6fce76d92c22ea905e01f1580d22228ac24a6689.php.php:100
 #, php-format
 msgid "I have %s dog."
 msgid_plural "I have %s dogs."
