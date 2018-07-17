@@ -63,6 +63,8 @@
                 margin-bottom: 30px;
             }
         </style>
+
+        <script src="https://cdn.ckeditor.com/4.10.0/standard/ckeditor.js"></script>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -82,8 +84,9 @@
                     Laravel
                 </div>
 
+
                 <div class="links">
-                    <a href="https://laravel.com/docs">{{ _i('Documentation') }}</a>
+                    <a href="https://laravel.com/docs">{{ _i('Documentation %s', 'test') }}</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">{{ _i('News') }}</a>
                     <a href="https://forge.laravel.com">Forge</a>
@@ -92,10 +95,28 @@
 
                 <p>
                     Test translate<br/>
-                    {{ _n('I have %s dog.', 'I have %s dogs.', 1, 1) }}
-                    {{ _n('I have %s dog.', 'I have %s dogs.', 2, 2) }}
+                    <?php $dog = rand(1, 1); ?>
+                    {{ _n('I have %s dog.', 'I have %s dogs.', $dog, $dog) }}<br/>
 
                 </p>
+
+
+                <form>
+                    <textarea name="editor1">{{ request()->input('editor1') }}</textarea>
+
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+
+
+                <h1>{{ env('APP_ENV') }}</h1>
+                <h2>Google</h2>
+                <h3>Google</h3>
+
+                <script>
+                    CKEDITOR.replace( 'editor1' , {
+                        removeButtons: "Image"
+                    });
+                </script>
             </div>
         </div>
     </body>

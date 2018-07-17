@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use App\Extend\LoadEnvironmentVariables;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -58,5 +59,21 @@ class Kernel extends HttpKernel
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+    ];
+
+
+    /**
+     * The bootstrap classes for the application.
+     *
+     * @var array
+     */
+    protected $bootstrappers = [
+//        \Illuminate\Foundation\Bootstrap\LoadEnvironmentVariables::class,
+        LoadEnvironmentVariables::class,
+        \Illuminate\Foundation\Bootstrap\LoadConfiguration::class,
+        \Illuminate\Foundation\Bootstrap\HandleExceptions::class,
+        \Illuminate\Foundation\Bootstrap\RegisterFacades::class,
+        \Illuminate\Foundation\Bootstrap\RegisterProviders::class,
+        \Illuminate\Foundation\Bootstrap\BootProviders::class,
     ];
 }
