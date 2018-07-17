@@ -83,15 +83,19 @@
                 <div class="title m-b-md">
                     Laravel
                 </div>
-
+                <?php echo _i('Hello2!'); ?>
 
                 <div class="links">
                     <a href="https://laravel.com/docs"><?php echo e(_i('Documentation %s', 'test')); ?></a>
                     <a href="https://laravel.com/docs"><?php echo e(_i('Documentation')); ?></a>
-                    <a href="https://laracasts.com">Laracasts</a>
+                    <a href="https://laracasts.com"><?php echo e(_i('Laracast')); ?></a>
                     <a href="https://laravel-news.com"><?php echo e(_i('News')); ?></a>
-                    <a href="https://forge.laravel.com"><?php echo e(_i('Forge')); ?>Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://forge.laravel.com"><?php echo e(_i('Forge')); ?></a>
+                    <a href="https://forge.laravel.com"><?php echo e(_i('Forge')); ?></a>
+                    <a href="https://forge.laravel.com"><?php echo e(_i('Forge')); ?></a>
+                    <a href="https://forge.laravel.com"><?php echo e(_i('Forge')); ?></a>
+                    <a href="https://forge.laravel.com"><?php echo e(_i('Forge')); ?></a>
+                    <a href="https://github.com/laravel/laravel"><?php echo e(_i('GitHub')); ?></a>
                 </div>
 
                 <p>

@@ -92,6 +92,7 @@ return [
         'Http',
         '../resources/views',
         'Console',
+        '../storage/framework/views'
     ],
 
     /**

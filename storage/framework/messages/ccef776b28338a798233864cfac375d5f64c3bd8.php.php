@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ app()->getLocale() }}">
+<html lang="<?php echo e(app()->getLocale()); ?>">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -68,16 +68,16 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
+            <?php if(Route::has('login')): ?>
                 <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
+                    <?php if(auth()->guard()->check()): ?>
+                        <a href="<?php echo e(url('/home')); ?>">Home</a>
+                    <?php else: ?>
+                        <a href="<?php echo e(route('login')); ?>">Login</a>
+                        <a href="<?php echo e(route('register')); ?>">Register</a>
+                    <?php endif; ?>
                 </div>
-            @endif
+            <?php endif; ?>
 
             <div class="content">
                 <div class="title m-b-md">
@@ -86,34 +86,30 @@
                 <?php echo _i('Hello2!'); ?>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">{{ _i('Documentation %s', 'test') }}</a>
-                    <a href="https://laravel.com/docs">{{ _i('Documentation') }}</a>
-                    <a href="https://laracasts.com">{{ _i('Laracast') }}</a>
-                    <a href="https://laravel-news.com">{{ _i('News') }}</a>
-                    <a href="https://forge.laravel.com">{{ _i('Forge') }}</a>
-                    <a href="https://forge.laravel.com">{{ _i('Forge') }}</a>
-                    <a href="https://forge.laravel.com">{{ _i('Forge') }}</a>
-                    <a href="https://forge.laravel.com">{{ _i('Forge') }}</a>
-                    <a href="https://forge.laravel.com">{{ _i('Forge') }}</a>
-                    <a href="https://github.com/laravel/laravel">{{ _i('GitHub') }}</a>
+                    <a href="https://laravel.com/docs"><?php echo e(_i('Documentation %s', 'test')); ?></a>
+                    <a href="https://laravel.com/docs"><?php echo e(_i('Documentation')); ?></a>
+                    <a href="https://laracasts.com"><?php echo e(_i('Laracast')); ?></a>
+                    <a href="https://laravel-news.com"><?php echo e(_i('News')); ?></a>
+                    <a href="https://forge.laravel.com"><?php echo e(_i('Forge')); ?></a>
+                    <a href="https://github.com/laravel/laravel"><?php echo e(_i('GitHub')); ?></a>
                 </div>
 
                 <p>
                     Test translate<br/>
                     <?php $dog = rand(1, 1); ?>
-                    {{ _n('I have %s dog.', 'I have %s dogs.', $dog, $dog) }}<br/>
+                    <?php echo e(_n('I have %s dog.', 'I have %s dogs.', $dog, $dog)); ?><br/>
 
                 </p>
 
 
                 <ul>
-                    @foreach(Config::get('laravel-gettext.supported-locales') as $locale)
-                        <li><a href="/lang/{{$locale}}">{{$locale}}</a></li>
-                    @endforeach
+                    <?php $__currentLoopData = Config::get('laravel-gettext.supported-locales'); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $locale): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <li><a href="/lang/<?php echo e($locale); ?>"><?php echo e($locale); ?></a></li>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </ul>
 
 
-                <h1>{{ env('APP_ENV') }}</h1>
+                <h1><?php echo e(env('APP_ENV')); ?></h1>
 
             </div>
         </div>
