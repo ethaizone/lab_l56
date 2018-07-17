@@ -91,10 +91,6 @@
                     <a href="https://laracasts.com"><?php echo e(_i('Laracast')); ?></a>
                     <a href="https://laravel-news.com"><?php echo e(_i('News')); ?></a>
                     <a href="https://forge.laravel.com"><?php echo e(_i('Forge')); ?></a>
-                    <a href="https://forge.laravel.com"><?php echo e(_i('Forge')); ?></a>
-                    <a href="https://forge.laravel.com"><?php echo e(_i('Forge')); ?></a>
-                    <a href="https://forge.laravel.com"><?php echo e(_i('Forge')); ?></a>
-                    <a href="https://forge.laravel.com"><?php echo e(_i('Forge')); ?></a>
                     <a href="https://github.com/laravel/laravel"><?php echo e(_i('GitHub')); ?></a>
                 </div>
 
@@ -102,6 +98,8 @@
                     Test translate<br/>
                     <?php $dog = rand(1, 1); ?>
                     <?php echo e(_n('I have %s dog.', 'I have %s dogs.', $dog, $dog)); ?><br/>
+
+                    <?php echo e(_i("Good job")); ?>
 
                 </p>
 

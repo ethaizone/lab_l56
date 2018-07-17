@@ -91,10 +91,6 @@
                     <a href="https://laracasts.com">{{ _i('Laracast') }}</a>
                     <a href="https://laravel-news.com">{{ _i('News') }}</a>
                     <a href="https://forge.laravel.com">{{ _i('Forge') }}</a>
-                    <a href="https://forge.laravel.com">{{ _i('Forge') }}</a>
-                    <a href="https://forge.laravel.com">{{ _i('Forge') }}</a>
-                    <a href="https://forge.laravel.com">{{ _i('Forge') }}</a>
-                    <a href="https://forge.laravel.com">{{ _i('Forge') }}</a>
                     <a href="https://github.com/laravel/laravel">{{ _i('GitHub') }}</a>
                 </div>
 
@@ -103,6 +99,7 @@
                     <?php $dog = rand(1, 1); ?>
                     {{ _n('I have %s dog.', 'I have %s dogs.', $dog, $dog) }}<br/>
 
+                    {{ _i("Good job") }}
                 </p>
 
 
